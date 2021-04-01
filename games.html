@@ -9,7 +9,7 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="icon" type="image/png" href="trickmix.png" />
+    <link rel="icon" type="image/png" href="trickmix-1.png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -21,120 +21,209 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
-    <title>React App</title>
-  </head>
-  <body style="background: #e1bee7;">
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-      crossorigin="anonymous"
-    ></script>
+    <title>Trickmix-Games</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-    <div>
-        <nav class="navbar navbar-light" style= background:#e1bee7; >
-          <img src="trickmix.png" alt="logo" height="50em" width="250em"/>
-          <form class="form-inline">
-            <a href="./index.html">
-              <button
-                class="btn my-2 my-sm-0"
-                type="button"
-                style="color: purple; border: 1px solid purple, margin-right= 0.5em, margin-left= 0.5em;"
-              >
-                Home
-              </button>
-            </a>
-            <a href="./games.html">
-              <button
-                class="btn my-2 my-sm-0"
-                type="button"
-                style="color: purple; border: 1px solid purple, margin-right= 0.5em, margin-left= 0.5em;"
-              >
-                Games
-              </button>
-            </a>
-            <a href="./about.html">
-              <button
-                class="btn my-2 my-sm-0"
-                type="button"
-                style="color: purple; border: 1px solid purple, margin-right= 0.5em, margin-left= 0.5em;"
-              >
-                About
-              </button>
-            </a>
-          </form>
-        </nav>
-      </div>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-      <div>games</div>
-      <div class="card-columns">
+    /* Float four columns side by side */
+    .column {
+      float: left;
+      width: 15%;
+      padding: 0 10px;
+    }
+
+    /* Remove extra left and right margins, due to padding */
+    .row {
+      margin: 0 -5px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .column {
+        width: 20%;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .column {
+        width: 25%;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .column {
+        width: 25%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 33%;
+      }
+    }
+
+    /* Style the counter cards */
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 16px;
+      text-align: center;
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+
+<body>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"
+  ></script>
+  <div>
+    <nav class="navbar navbar-light" style="background: linear-gradient(to top, #33ccff 0%, #ff99cc 100%);" >
+      <img src="trickmix-1.png" alt="logo" height="50em" width="250em"/>
+      <form class="form-inline">
+        <a href="./index.html">
+          <button
+            class="btn my-2 my-sm-0"
+            type="button"
+            style="color: #ffffff; border: 1px solid #ffffff, margin-right= 0.5em, margin-left= 0.5em;"
+          >
+            Home
+          </button>
+        </a>
+        <a href="./games.html">
+          <button
+            class="btn my-2 my-sm-0"
+            type="button"
+            style="color: #ffffff; border: 1px solid #ffffff, margin-right= 0.5em, margin-left= 0.5em;"
+          >
+            Games
+          </button>
+        </a>
+        <a href="./about.html">
+          <button
+            class="btn my-2 my-sm-0"
+            type="button"
+            style="color: #ffffff; border: 1px solid #ffffff, margin-right= 0.5em, margin-left= 0.5em;"
+          >
+            About
+          </button>
+        </a>
+      </form>
+    </nav>
+  </div>
+  <br />
+
+  <div class="row">
+    <!-- done -->
+    <div class="column">
+      <a href="https://ufo-hunter.netlify.app/">
+        <img src="./img/game-img/ufo-hunter.png" class="card-img-top" alt="...">
+      </a>
+      <div class="card">
+        <a href="https://ufo-hunter.netlify.app/">
+          <h5 class="card-title" style="text-align: center;">UFO HUNTER</h5>
+        </a>
+      </div>
+    </div>
+    <!-- done -->
+    <div class="column">
+      <a href="https://tetris-game-safin.netlify.app/" target="_blank">
+        <img src="./img/game-img/Tetris.png" class="card-img-top" alt="...">
+      </a>
+      <div class="card">
+        <a href="https://tetris-game-safin.netlify.app/">
+          <h5 class="card-title" style="text-align: center;">Tetris</h5>
+        </a>
+      </div>
+    </div>
+    <!-- done -->
+    <div class="column">
+      <a href="https://monster-killer-seher-demo-game.netlify.app/" target="_blank">
+        <img src="./img/game-img/monster.png" class="card-img-top" alt="...">
+      </a>
+      <div class="card">
+        <a href="https://monster-killer-seher-demo-game.netlify.app/">
+          <h5 class="card-title" style="text-align: center;">Monster Killer</h5>
+        </a>
+      </div>
+    </div>
+    <!-- done -->
+    <div class="column">
+      <a href="https://memory-game-safin.netlify.app/" target="_blank">
+        <img src="./img/game-img/mamory.png" class="card-img-top" alt="...">
+      </a>
+      <div class="card">
+        <a href="https://memory-game-safin.netlify.app/">
+          <h5 class="card-title" style="text-align: center;">Mamory</h5>
+        </a>
+      </div>
+    </div>
+    <!-- done -->
+    <div class="column">
+      <a href="https://connect-four-game-safin.netlify.app/" target="_blank">
+        <img src="./img/game-img/connectFour.png" class="card-img-top" alt="...">
+      </a>
+      <div class="card">
+        <a href="https://connect-four-game-safin.netlify.app/">
+          <h5 class="card-title" style="text-align: center;">Connect Four</h5>
+        </a>
+      </div>
+    </div>
+    <!-- done -->
+    <div class="column">
+      <a href="https://space-imadrs-game-safin.netlify.app/" target="_blank">
+        <img src="./img/game-img/spaceImder.png" class="card-img-top" alt="...">
+      </a>
+      <div class="card">
+        <a href="https://space-imadrs-game-safin.netlify.app/">
+          <h5 class="class title" style="text-align: center;">Space Imder</h5>
+        </a>
+      </div>
+    </div>
+    <!-- done -->
+    <div class="column">
+      <a href="https://rock-paper-scissors-seher-demo-game.netlify.app" target="_blank">
+        <img src="./img/game-img/rps.png" class="card-img-top" alt="...">
+      </a>
+      <div class="card">
+        <a href="https://rock-paper-scissors-seher-demo-game.netlify.app">
+          <h5 class="card-title" style="text-align: center;">Rock Paper Scissor!</h5>
+        </a>
+      </div>     
+    </div>
+      <!-- done -->
+      <div class="column">
+        <a href="https://seher-dino.netlify.app/" target="_blank">
+          <img src="./img/game-img/Dino.png" class="card-img-top">
+        </a>
         <div class="card">
-          <img src="./img/game-img/ufo-hunter.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">UFO-HUNTER</h5>
-          </div>
-        </div>
-        <div class="card p-3">
-            <img src="./img/game-img/ufo-hunter.png" class="card-img-top" alt="...">
-          <blockquote class="blockquote mb-0 card-body">
-            <p>A well-known quote, contained in a blockquote element.</p>
-            <footer class="blockquote-footer">
-              <small class="text-muted">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-              </small>
-            </footer>
-          </blockquote>
-        </div>
-        <div class="card">
-            <img src="./img/game-img/ufo-hunter.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card bg-primary text-white text-center p-3">
-            <img src="./img/game-img/ufo-hunter.png" class="card-img-top" alt="...">
-          <blockquote class="blockquote mb-0">
-            <p>A well-known quote, contained in a blockquote element.</p>
-            <footer class="blockquote-footer text-white">
-              <small>
-                Someone famous in <cite title="Source Title">Source Title</cite>
-              </small>
-            </footer>
-          </blockquote>
-        </div>
-        <div class="card text-center">
-          <div class="card-body">
-            <img src="./img/game-img/ufo-hunter.png" class="card-img-top" alt="...">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card p-3 text-right">
-          <blockquote class="blockquote mb-0">
-            <img src="./img/game-img/ufo-hunter.png" class="card-img-top" alt="...">
-            <p>A well-known quote, contained in a blockquote element.</p>
-            <footer class="blockquote-footer">
-              <small class="text-muted">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-              </small>
-            </footer>
-          </blockquote>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <img src="./img/game-img/ufo-hunter.png" class="card-img-top" alt="...">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
+          <a href="https://seher-dino.netlify.app/">
+            <h5 class="card-title" style="text-align: center;">T-Rex Runner!</h5>
+          </a>
         </div>
       </div>
-  </body>
+      <!-- done -->
+    </div>
+  </div>
+  </div>
+</body>
+
 </html>
